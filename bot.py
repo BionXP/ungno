@@ -154,7 +154,7 @@ def join_game(update: Update, context: CallbackContext):
     except AlreadyJoinedError:
         send_async(context.bot, chat.id,
                    text=_("You already joined the game. Start the game "
-                          "with /start"),
+                          "with /unostart"),
                    reply_to_message_id=update.message.message_id)
 
     except DeckEmptyError:
@@ -347,7 +347,7 @@ def status_update(update: Update, context: CallbackContext):
 @game_locales
 @user_locale
 def start_game(update: Update, context: CallbackContext):
-    """Handler for the /start command"""
+    """Handler for the start command"""
 
     if update.message.chat.type != 'private':
         chat = update.message.chat
