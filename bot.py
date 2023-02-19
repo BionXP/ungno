@@ -215,7 +215,7 @@ def leave_game(update: Update, context: CallbackContext):
 
 @user_locale
 def kick_player(update: Update, context: CallbackContext):
-    """Handler for the /kick command"""
+    """Handler for the /unokick command"""
 
     if update.message.chat.type == 'private':
         help_handler(update, context)
@@ -266,7 +266,7 @@ def kick_player(update: Update, context: CallbackContext):
 
         else:
             send_async(context.bot, chat.id,
-                text=_("Please reply to the person you want to kick and type /kick again."),
+                text=_("Please reply to the person you want to kick and type /unokick again."),
                 reply_to_message_id=update.message.message_id)
             return
 
