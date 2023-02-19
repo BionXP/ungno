@@ -91,7 +91,7 @@ def new_game(update: Update, context: CallbackContext):
         game.mode = DEFAULT_GAMEMODE
         send_async(context.bot, chat_id,
                    text=_("Created a new game! Join the game with /join "
-                          "and start the game with /start"))
+                          "and start the game with /unostart"))
 
 
 @user_locale
@@ -121,7 +121,7 @@ def kill_game(update: Update, context: CallbackContext):
         except NoGameInChatError:
             send_async(context.bot, chat.id,
                        text=_("The game is not started yet. "
-                              "Join the game with /join and start the game with /start"),
+                              "Join the game with /join and start the game with /unostart"),
                        reply_to_message_id=update.message.message_id)
 
     else:
