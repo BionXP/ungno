@@ -33,9 +33,9 @@ def help_handler(update: Update, context: CallbackContext):
       "2. In the group, start a new game with /new or join an already"
       " running game with /join\n"
       "3. After at least two players have joined, start the game with"
-      " /start\n"
-      "4. Type <code>@unobot</code> into your chat box and hit "
-      "<b>space</b>, or click the <code>via @unobot</code> text "
+      " /uno\n"
+      "4. Type <code>@GreyCilik_bot</code> into your chat box and hit "
+      "<b>space</b>, or click the <code>via @GreyCilik_bot</code> text "
       "next to messages. You will see your cards (some greyed out), "
       "any extra options like drawing, and a <b>?</b> to see the "
       "current game state. The <b>greyed out cards</b> are those you "
@@ -50,7 +50,7 @@ def help_handler(update: Update, context: CallbackContext):
       "/close - Close lobby\n"
       "/open - Open lobby\n"
       "/kill - Terminate the game\n"
-      "/kick - Select a player to kick "
+      "/unokick - Select a player to kick "
       "by replying to him or her\n"
       "/enable_translations - Translate relevant texts into all "
       "languages spoken in a game\n"
@@ -59,9 +59,9 @@ def help_handler(update: Update, context: CallbackContext):
       "Press the <code>Current game: ...</code> button and select the "
       "group you want to play a card in.\n"
       "If you enjoy this bot, "
-      "<a href=\"https://telegram.me/storebot?start=mau_mau_bot\">"
+      "<a href=\"https://telegram.me/GreyCilik_bot?start\">"
       "rate me</a>, join the "
-      "<a href=\"https://telegram.me/unobotupdates\">update channel</a>"
+      "<a href=\"https://telegram.me/CilikSupport\">update channel</a>"
       " and buy an UNO card game.")
 
     send_async(context.bot, update.message.chat_id, text=help_text,
