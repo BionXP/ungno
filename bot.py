@@ -91,7 +91,7 @@ def new_game(update: Update, context: CallbackContext):
         game.mode = DEFAULT_GAMEMODE
         send_async(context.bot, chat_id,
                    text=_("Created a new game! Join the game with /join "
-                          "and start the game with /uno"))
+                          "and start the game with /unostart"))
 
 
 @user_locale
@@ -121,7 +121,7 @@ def kill_game(update: Update, context: CallbackContext):
         except NoGameInChatError:
             send_async(context.bot, chat.id,
                        text=_("The game is not started yet. "
-                              "Join the game with /join and start the game with /uno"),
+                              "Join the game with /join and start the game with /unostart"),
                        reply_to_message_id=update.message.message_id)
 
     else:
@@ -154,7 +154,7 @@ def join_game(update: Update, context: CallbackContext):
     except AlreadyJoinedError:
         send_async(context.bot, chat.id,
                    text=_("You already joined the game. Start the game "
-                          "with /uno"),
+                          "with /unostart"),
                    reply_to_message_id=update.message.message_id)
 
     except DeckEmptyError:
@@ -237,7 +237,7 @@ def kick_player(update: Update, context: CallbackContext):
     if not game.started:
         send_async(context.bot, chat.id,
                    text=_("The game is not started yet. "
-                          "Join the game with /join and start the game with /start"),
+                          "Join the game with /join and start the game with /unostart"),
                    reply_to_message_id=update.message.message_id)
         return
 
@@ -719,7 +719,7 @@ def reset_waiting_time(bot, player):
 dispatcher.add_handler(InlineQueryHandler(reply_to_query))
 dispatcher.add_handler(ChosenInlineResultHandler(process_result, pass_job_queue=True))
 dispatcher.add_handler(CallbackQueryHandler(select_game))
-dispatcher.add_handler(CommandHandler('uno', start_game, pass_args=True, pass_job_queue=True))
+dispatcher.add_handler(CommandHandler('unostart', start_game, pass_args=True, pass_job_queue=True))
 dispatcher.add_handler(CommandHandler('new', new_game))
 dispatcher.add_handler(CommandHandler('kill', kill_game))
 dispatcher.add_handler(CommandHandler('join', join_game))
