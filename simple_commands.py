@@ -33,7 +33,7 @@ def help_handler(update: Update, context: CallbackContext):
       "1. Tambahkan bot ini ke grup\n"
       "2. Di grup, mulai permainan baru dengan ketik : /new \n"
       "3. Untuk bergabung ke lobi, ketik : /join \n"
-      "4. Setelah setidaknya dua pemain bergabung, mulailah permainan dengan mengetik: /uno \n\n"
+      "4. Setelah setidaknya dua pemain bergabung, mulailah permainan dengan mengetik: /unostart \n\n"
       "📑 Perintah Lainnya :\n\n"
       "/leave : Untuk meninggalkan permainan\n"
       "/unoskip  : untuk melewati pemain lain\n"
@@ -46,9 +46,10 @@ def help_handler(update: Update, context: CallbackContext):
       "/enable_translations : Terjemahkan teks yang relevan ke semua\n"
       "/disable_translations - Gunakan bahasa Inggris untuk teks tersebut\n\n"
       "👨‍💻 About : \n\n"
-      "🚀 <a href=\"https://t.me/CilikSupport\">Support Groups</a> \n\n"
+      "🚀 <a href=\"https://t.me/ZennXSupport">Support Groups</a> \n\n"
       "Have a nice play :)")
-
+      "👨‍💻 <a href=\"https://t.me/milkfortunate">owner</a> \n\n"
+       
     send_async(context.bot, update.message.chat_id, text=help_text,
                parse_mode=ParseMode.HTML, disable_web_page_preview=True)
 
