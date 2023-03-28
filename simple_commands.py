@@ -46,9 +46,10 @@ def help_handler(update: Update, context: CallbackContext):
       "/enable_translations : Terjemahkan teks yang relevan ke semua\n"
       "/disable_translations - Gunakan bahasa Inggris untuk teks tersebut\n\n"
       "👨‍💻 About : \n\n"
-      "🚀 <a href=\"https://t.me/ZennXSupport">Support Groups</a> \n\n"
-      "Have a nice play :)")
-      "👨‍💻 <a href=\"https://t.me/milkfortunate">owner</a> \n\n"
+       "<a href=\"https://t.me/zennihhh\">👥 update group</a>\n"
+      "<a href=\"https://t.me/zennihhh\">🚀 update channel</a>\n"
+      "<a href=\"https://t.me/onlybionn\">👨‍💻 Owner</a>\n\n"
+      " Selamat Bermain :).")
        
     send_async(context.bot, update.message.chat_id, text=help_text,
                parse_mode=ParseMode.HTML, disable_web_page_preview=True)
