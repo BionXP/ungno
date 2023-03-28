@@ -28,7 +28,7 @@ from internationalization import _, user_locale
 @user_locale
 def help_handler(update: Update, context: CallbackContext):
     """Handler for the /help command"""
-    help_text = _("👋🏻 HALO AKU ADALAH <b>CILIK BOT</b> 🤖\n\n"
+    help_text = _("👋🏻 HALO AKU ADALAH <b>Hinata</b> 🤖\n\n"
       "Jika ingin memainkan <b>UNO GAMES</b>  silahkan ikuti langkah dibawah ini :\n\n"
       "1. Tambahkan bot ini ke grup\n"
       "2. Di grup, mulai permainan baru dengan ketik : /new \n"
